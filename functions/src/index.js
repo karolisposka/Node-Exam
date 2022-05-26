@@ -1,9 +1,6 @@
 const functions = require('firebase-functions');
 const express = require('express');
 const cors = require('cors');
-const { port } = require('./config');
-console.log(port);
-console.log(port);
 const app = express();
 const usersRouter = require('../src/routes/v1/users');
 const productsRouter = require('../src/routes/v1/products');

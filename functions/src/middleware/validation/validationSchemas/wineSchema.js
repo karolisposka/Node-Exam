@@ -6,4 +6,4 @@ const wineSchema = joi.object({
   region: joi.string().required(),
 });
 
-module.exports = wineSchema;
+module.exports = { wineSchema };

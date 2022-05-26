@@ -23,7 +23,7 @@ router.get('/wines/:page/', async (req, res) => {
   }
 });
 
-router.post('/add-wine', checkIfLoggedIn, validate(wineSchema), async (req, res) => {
+router.post('/add-wine', validate(wineSchema), checkIfLoggedIn, async (req, res) => {
   try {
     const data = await sqlController(`INSERT INTO wines (title, year, region)
       VALUES(${mysql.escape(req.body.title)}, ${mysql.escape(req.body.year)}, ${mysql.escape(req.body.region)});`);
