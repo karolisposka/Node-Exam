@@ -1,0 +1,335 @@
+[debug] [2022-05-25T19:17:04.729Z] ----------------------------------------------------------------------
+[debug] [2022-05-25T19:17:04.732Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\karol\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-05-25T19:17:04.733Z] CLI Version:   11.0.1
+[debug] [2022-05-25T19:17:04.733Z] Platform:      win32
+[debug] [2022-05-25T19:17:04.733Z] Node Version:  v16.13.0
+[debug] [2022-05-25T19:17:04.734Z] Time:          Wed May 25 2022 22:17:04 GMT+0300 (Eastern European Summer Time)
+[debug] [2022-05-25T19:17:04.735Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-25T19:17:04.814Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-25T19:17:04.815Z] > authorizing via signed-in user (karolisposka96@gmail.com)
+[debug] [2022-05-25T19:17:04.816Z] [iam] checking project nodeexam-c3b82 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2022-05-25T19:17:04.820Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/nodeexam-c3b82:testIamPermissions [none]
+[debug] [2022-05-25T19:17:04.820Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nodeexam-c3b82:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2022-05-25T19:17:05.619Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/nodeexam-c3b82:testIamPermissions 200
+[debug] [2022-05-25T19:17:05.619Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nodeexam-c3b82:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2022-05-25T19:17:05.620Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/nodeexam-c3b82/serviceAccounts/nodeexam-c3b82@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2022-05-25T19:17:05.620Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/nodeexam-c3b82/serviceAccounts/nodeexam-c3b82@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-05-25T19:17:06.607Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/nodeexam-c3b82/serviceAccounts/nodeexam-c3b82@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2022-05-25T19:17:06.607Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/nodeexam-c3b82/serviceAccounts/nodeexam-c3b82@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'nodeexam-c3b82'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] +  functions: Finished running predeploy script. 
+[debug] [2022-05-25T19:17:08.136Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nodeexam-c3b82 [none]
+[debug] [2022-05-25T19:17:08.413Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nodeexam-c3b82 200
+[debug] [2022-05-25T19:17:08.413Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nodeexam-c3b82 {"projectId":"nodeexam-c3b82","projectNumber":"97103227611","displayName":"nodeExam","name":"projects/nodeexam-c3b82","resources":{"hostingSite":"nodeexam-c3b82"},"state":"ACTIVE"}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2022-05-25T19:17:08.416Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nodeexam-c3b82/services/cloudfunctions.googleapis.com [none]
+[debug] [2022-05-25T19:17:08.418Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nodeexam-c3b82/services/runtimeconfig.googleapis.com [none]
+[debug] [2022-05-25T19:17:08.419Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nodeexam-c3b82/services/cloudbuild.googleapis.com [none]
+[debug] [2022-05-25T19:17:08.421Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nodeexam-c3b82/services/artifactregistry.googleapis.com [none]
+[debug] [2022-05-25T19:17:09.411Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nodeexam-c3b82/services/cloudfunctions.googleapis.com 200
+[debug] [2022-05-25T19:17:09.411Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nodeexam-c3b82/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2022-05-25T19:17:09.413Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nodeexam-c3b82/services/runtimeconfig.googleapis.com 200
+[debug] [2022-05-25T19:17:09.414Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nodeexam-c3b82/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2022-05-25T19:17:09.453Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nodeexam-c3b82/services/artifactregistry.googleapis.com 200
+[debug] [2022-05-25T19:17:09.453Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nodeexam-c3b82/services/artifactregistry.googleapis.com [omitted]
+[debug] [2022-05-25T19:17:09.459Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nodeexam-c3b82/services/cloudbuild.googleapis.com 200
+[debug] [2022-05-25T19:17:09.459Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nodeexam-c3b82/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2022-05-25T19:17:09.460Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nodeexam-c3b82/adminSdkConfig [none]
+[debug] [2022-05-25T19:17:09.755Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nodeexam-c3b82/adminSdkConfig 200
+[debug] [2022-05-25T19:17:09.755Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nodeexam-c3b82/adminSdkConfig {"projectId":"nodeexam-c3b82","storageBucket":"nodeexam-c3b82.appspot.com"}
+[debug] [2022-05-25T19:17:09.755Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/nodeexam-c3b82/configs [none]
+[debug] [2022-05-25T19:17:10.691Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/nodeexam-c3b82/configs 200
+[debug] [2022-05-25T19:17:10.691Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/nodeexam-c3b82/configs {}
+[info] i  functions: preparing codebase default for deployment 
+[debug] [2022-05-25T19:17:10.694Z] Validating nodejs source
+[debug] [2022-05-25T19:17:12.903Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "src/index.js",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-05-25T19:17:12.904Z] Building nodejs source
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2022-05-25T19:17:12.905Z] Analyzing nodejs backend spec
+[debug] [2022-05-25T19:17:12.906Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-05-25T19:17:13.167Z] Serving at port 9005
+
+[debug] [2022-05-25T19:17:13.244Z] 8080
+
+[debug] [2022-05-25T19:17:13.244Z] 8080
+
+[debug] [2022-05-25T19:17:13.534Z] server is running on 8080 port
+
+[debug] [2022-05-25T19:17:13.540Z] Got response from /__/functions.yaml {"endpoints":{"app":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"app"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-05-25T19:17:13.547Z] shutdown requested via /__/quitquitquit
+
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged C:\Users\karol\OneDrive\Desktop\firebase\functions (82.31 KB) for uploading 
+[debug] [2022-05-25T19:17:23.643Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/nodeexam-c3b82/locations/-/functions [none]
+[debug] [2022-05-25T19:17:24.410Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/nodeexam-c3b82/locations/-/functions 200
+[debug] [2022-05-25T19:17:24.410Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/nodeexam-c3b82/locations/-/functions {}
+[debug] [2022-05-25T19:17:24.411Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2alpha/projects/nodeexam-c3b82/locations/-/functions [none]
+[debug] [2022-05-25T19:17:25.590Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2alpha/projects/nodeexam-c3b82/locations/-/functions 200
+[debug] [2022-05-25T19:17:25.590Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2alpha/projects/nodeexam-c3b82/locations/-/functions {}
+[debug] [2022-05-25T19:17:25.596Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nodeexam-c3b82 [none]
+[debug] [2022-05-25T19:17:25.887Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nodeexam-c3b82 200
+[debug] [2022-05-25T19:17:25.887Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nodeexam-c3b82 {"projectId":"nodeexam-c3b82","projectNumber":"97103227611","displayName":"nodeExam","name":"projects/nodeexam-c3b82","resources":{"hostingSite":"nodeexam-c3b82"},"state":"ACTIVE"}
+[debug] [2022-05-25T19:17:25.887Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2022-05-25T19:17:25.888Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/nodeexam-c3b82:testIamPermissions [none]
+[debug] [2022-05-25T19:17:25.888Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nodeexam-c3b82:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2022-05-25T19:17:26.664Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/nodeexam-c3b82:testIamPermissions 200
+[debug] [2022-05-25T19:17:26.664Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nodeexam-c3b82:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2022-05-25T19:17:26.664Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2022-05-25T19:17:26.665Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/nodeexam-c3b82/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2022-05-25T19:17:26.665Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/nodeexam-c3b82/locations/us-central1/functions:generateUploadUrl {}
+[debug] [2022-05-25T19:17:34.467Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/nodeexam-c3b82/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2022-05-25T19:17:34.468Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/nodeexam-c3b82/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/uploads-502404519006.us-central1.cloudfunctions.appspot.com/0a1b12bc-d10f-4d63-9c07-a64db1cffcb4.zip?GoogleAccessId=service-97103227611@gcf-admin-robot.iam.gserviceaccount.com&Expires=1653508054&Signature=YZxKv9IIbyAiwvO51EMvjZ3y1IWtv3HQdu6ZkPNEjiGjBQOO0npWIR%2Fo3U1pLlh6zY7g%2FshzDHpXhWgKCg1RLQojxTokpn9wgDlMQzWnWne6PqCMfah1U%2FzCmlwObLfYzlO0MrFP%2BxM9gZ8U1TvgktD9IZGliWDsb6pSFZvSagbgdIY7Wu2Fgue%2B45lhzLF1d5%2FqrgCTNAqKzSlzNGfDtU0Uh%2BBwmHoAUjm5mcUvm5UbO9ocit9%2FVo5JKQ05%2B5WmvTPeSFe5uN%2FjppJUJZJ72pPW9rMuFN9LS24ylhkYbFW2rYWu7DGDK%2Bqg4%2Ff0S6fSBQcisbpY%2B%2Bm5L8NpEI9uVw%3D%3D"}
+[debug] [2022-05-25T19:17:34.469Z] >>> [apiv2][query] PUT https://storage.googleapis.com/uploads-502404519006.us-central1.cloudfunctions.appspot.com/0a1b12bc-d10f-4d63-9c07-a64db1cffcb4.zip GoogleAccessId=service-97103227611%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1653508054&Signature=YZxKv9IIbyAiwvO51EMvjZ3y1IWtv3HQdu6ZkPNEjiGjBQOO0npWIR%2Fo3U1pLlh6zY7g%2FshzDHpXhWgKCg1RLQojxTokpn9wgDlMQzWnWne6PqCMfah1U%2FzCmlwObLfYzlO0MrFP%2BxM9gZ8U1TvgktD9IZGliWDsb6pSFZvSagbgdIY7Wu2Fgue%2B45lhzLF1d5%2FqrgCTNAqKzSlzNGfDtU0Uh%2BBwmHoAUjm5mcUvm5UbO9ocit9%2FVo5JKQ05%2B5WmvTPeSFe5uN%2FjppJUJZJ72pPW9rMuFN9LS24ylhkYbFW2rYWu7DGDK%2Bqg4%2Ff0S6fSBQcisbpY%2B%2Bm5L8NpEI9uVw%3D%3D
+[debug] [2022-05-25T19:17:34.469Z] >>> [apiv2][body] PUT https://storage.googleapis.com/uploads-502404519006.us-central1.cloudfunctions.appspot.com/0a1b12bc-d10f-4d63-9c07-a64db1cffcb4.zip [stream]
+[debug] [2022-05-25T19:17:35.193Z] <<< [apiv2][status] PUT https://storage.googleapis.com/uploads-502404519006.us-central1.cloudfunctions.appspot.com/0a1b12bc-d10f-4d63-9c07-a64db1cffcb4.zip 200
+[debug] [2022-05-25T19:17:35.193Z] <<< [apiv2][body] PUT https://storage.googleapis.com/uploads-502404519006.us-central1.cloudfunctions.appspot.com/0a1b12bc-d10f-4d63-9c07-a64db1cffcb4.zip [omitted]
+[info] +  functions: functions folder uploaded successfully 
+[info] i  functions: creating Node.js 16 function app(us-central1)... 
+[debug] [2022-05-25T19:17:35.199Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/nodeexam-c3b82/locations/us-central1/functions [none]
+[debug] [2022-05-25T19:17:35.200Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/nodeexam-c3b82/locations/us-central1/functions {"name":"projects/nodeexam-c3b82/locations/us-central1/functions/app","sourceUploadUrl":"https://storage.googleapis.com/uploads-502404519006.us-central1.cloudfunctions.appspot.com/0a1b12bc-d10f-4d63-9c07-a64db1cffcb4.zip?GoogleAccessId=service-97103227611@gcf-admin-robot.iam.gserviceaccount.com&Expires=1653508054&Signature=YZxKv9IIbyAiwvO51EMvjZ3y1IWtv3HQdu6ZkPNEjiGjBQOO0npWIR%2Fo3U1pLlh6zY7g%2FshzDHpXhWgKCg1RLQojxTokpn9wgDlMQzWnWne6PqCMfah1U%2FzCmlwObLfYzlO0MrFP%2BxM9gZ8U1TvgktD9IZGliWDsb6pSFZvSagbgdIY7Wu2Fgue%2B45lhzLF1d5%2FqrgCTNAqKzSlzNGfDtU0Uh%2BBwmHoAUjm5mcUvm5UbO9ocit9%2FVo5JKQ05%2B5WmvTPeSFe5uN%2FjppJUJZJ72pPW9rMuFN9LS24ylhkYbFW2rYWu7DGDK%2Bqg4%2Ff0S6fSBQcisbpY%2B%2Bm5L8NpEI9uVw%3D%3D","entryPoint":"app","runtime":"nodejs16","labels":{"deployment-tool":"cli-firebase"},"httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"environmentVariables":{"SERVER_PORT":"8080","DB_PORT":"25060","DB_USERNAME":"doadmin","DB_PASSWORD":"AVNS_TjWZPNR1C5EBw_N","DB_HOST":"db-mysql-fra1-39504-do-user-11242352-0.b.db.ondigitalocean.com","DB_NAME":"defaultdb","JWT_CODE":"karolis123","FIREBASE_CONFIG":"{\"projectId\":\"nodeexam-c3b82\",\"storageBucket\":\"nodeexam-c3b82.appspot.com\"}","GCLOUD_PROJECT":"nodeexam-c3b82"}}
+[debug] [2022-05-25T19:17:35.923Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/nodeexam-c3b82/locations/us-central1/functions 200
+[debug] [2022-05-25T19:17:35.923Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/nodeexam-c3b82/locations/us-central1/functions {"name":"operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/nodeexam-c3b82/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/nodeexam-c3b82/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-502404519006.us-central1.cloudfunctions.appspot.com/0a1b12bc-d10f-4d63-9c07-a64db1cffcb4.zip?GoogleAccessId=service-97103227611@gcf-admin-robot.iam.gserviceaccount.com&Expires=1653508054&Signature=YZxKv9IIbyAiwvO51EMvjZ3y1IWtv3HQdu6ZkPNEjiGjBQOO0npWIR%2Fo3U1pLlh6zY7g%2FshzDHpXhWgKCg1RLQojxTokpn9wgDlMQzWnWne6PqCMfah1U%2FzCmlwObLfYzlO0MrFP%2BxM9gZ8U1TvgktD9IZGliWDsb6pSFZvSagbgdIY7Wu2Fgue%2B45lhzLF1d5%2FqrgCTNAqKzSlzNGfDtU0Uh%2BBwmHoAUjm5mcUvm5UbO9ocit9%2FVo5JKQ05%2B5WmvTPeSFe5uN%2FjppJUJZJ72pPW9rMuFN9LS24ylhkYbFW2rYWu7DGDK%2Bqg4%2Ff0S6fSBQcisbpY%2B%2Bm5L8NpEI9uVw%3D%3D","environmentVariables":{"SERVER_PORT":"8080","DB_PORT":"25060","DB_USERNAME":"doadmin","DB_PASSWORD":"AVNS_TjWZPNR1C5EBw_N","DB_HOST":"db-mysql-fra1-39504-do-user-11242352-0.b.db.ondigitalocean.com","DB_NAME":"defaultdb","JWT_CODE":"karolis123","FIREBASE_CONFIG":"{\"projectId\":\"nodeexam-c3b82\",\"storageBucket\":\"nodeexam-c3b82.appspot.com\"}","GCLOUD_PROJECT":"nodeexam-c3b82"},"runtime":"nodejs16"},"versionId":"1","updateTime":"2022-05-25T19:17:35Z"}}
+[debug] [2022-05-25T19:17:35.924Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF [none]
+[debug] [2022-05-25T19:17:36.388Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF 200
+[debug] [2022-05-25T19:17:36.388Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF {"name":"operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/nodeexam-c3b82/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/nodeexam-c3b82/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-502404519006.us-central1.cloudfunctions.appspot.com/0a1b12bc-d10f-4d63-9c07-a64db1cffcb4.zip?GoogleAccessId=service-97103227611@gcf-admin-robot.iam.gserviceaccount.com&Expires=1653508054&Signature=YZxKv9IIbyAiwvO51EMvjZ3y1IWtv3HQdu6ZkPNEjiGjBQOO0npWIR%2Fo3U1pLlh6zY7g%2FshzDHpXhWgKCg1RLQojxTokpn9wgDlMQzWnWne6PqCMfah1U%2FzCmlwObLfYzlO0MrFP%2BxM9gZ8U1TvgktD9IZGliWDsb6pSFZvSagbgdIY7Wu2Fgue%2B45lhzLF1d5%2FqrgCTNAqKzSlzNGfDtU0Uh%2BBwmHoAUjm5mcUvm5UbO9ocit9%2FVo5JKQ05%2B5WmvTPeSFe5uN%2FjppJUJZJ72pPW9rMuFN9LS24ylhkYbFW2rYWu7DGDK%2Bqg4%2Ff0S6fSBQcisbpY%2B%2Bm5L8NpEI9uVw%3D%3D","environmentVariables":{"SERVER_PORT":"8080","DB_PORT":"25060","DB_USERNAME":"doadmin","DB_PASSWORD":"AVNS_TjWZPNR1C5EBw_N","DB_HOST":"db-mysql-fra1-39504-do-user-11242352-0.b.db.ondigitalocean.com","DB_NAME":"defaultdb","JWT_CODE":"karolis123","FIREBASE_CONFIG":"{\"projectId\":\"nodeexam-c3b82\",\"storageBucket\":\"nodeexam-c3b82.appspot.com\"}","GCLOUD_PROJECT":"nodeexam-c3b82"},"runtime":"nodejs16"},"versionId":"1","updateTime":"2022-05-25T19:17:35Z"}}
+[debug] [2022-05-25T19:17:36.895Z] [create-default-us-central1-app] Retrying task index 0
+[debug] [2022-05-25T19:17:36.895Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF [none]
+[debug] [2022-05-25T19:17:37.376Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF 200
+[debug] [2022-05-25T19:17:37.376Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF {"name":"operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/nodeexam-c3b82/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/nodeexam-c3b82/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-502404519006.us-central1.cloudfunctions.appspot.com/0a1b12bc-d10f-4d63-9c07-a64db1cffcb4.zip?GoogleAccessId=service-97103227611@gcf-admin-robot.iam.gserviceaccount.com&Expires=1653508054&Signature=YZxKv9IIbyAiwvO51EMvjZ3y1IWtv3HQdu6ZkPNEjiGjBQOO0npWIR%2Fo3U1pLlh6zY7g%2FshzDHpXhWgKCg1RLQojxTokpn9wgDlMQzWnWne6PqCMfah1U%2FzCmlwObLfYzlO0MrFP%2BxM9gZ8U1TvgktD9IZGliWDsb6pSFZvSagbgdIY7Wu2Fgue%2B45lhzLF1d5%2FqrgCTNAqKzSlzNGfDtU0Uh%2BBwmHoAUjm5mcUvm5UbO9ocit9%2FVo5JKQ05%2B5WmvTPeSFe5uN%2FjppJUJZJ72pPW9rMuFN9LS24ylhkYbFW2rYWu7DGDK%2Bqg4%2Ff0S6fSBQcisbpY%2B%2Bm5L8NpEI9uVw%3D%3D","environmentVariables":{"SERVER_PORT":"8080","DB_PORT":"25060","DB_USERNAME":"doadmin","DB_PASSWORD":"AVNS_TjWZPNR1C5EBw_N","DB_HOST":"db-mysql-fra1-39504-do-user-11242352-0.b.db.ondigitalocean.com","DB_NAME":"defaultdb","JWT_CODE":"karolis123","FIREBASE_CONFIG":"{\"projectId\":\"nodeexam-c3b82\",\"storageBucket\":\"nodeexam-c3b82.appspot.com\"}","GCLOUD_PROJECT":"nodeexam-c3b82"},"runtime":"nodejs16"},"versionId":"1","updateTime":"2022-05-25T19:17:35Z"}}
+[debug] [2022-05-25T19:17:38.388Z] [create-default-us-central1-app] Retrying task index 0
+[debug] [2022-05-25T19:17:38.388Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF [none]
+[debug] [2022-05-25T19:17:38.868Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF 200
+[debug] [2022-05-25T19:17:38.868Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF {"name":"operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/nodeexam-c3b82/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/nodeexam-c3b82/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-502404519006.us-central1.cloudfunctions.appspot.com/0a1b12bc-d10f-4d63-9c07-a64db1cffcb4.zip?GoogleAccessId=service-97103227611@gcf-admin-robot.iam.gserviceaccount.com&Expires=1653508054&Signature=YZxKv9IIbyAiwvO51EMvjZ3y1IWtv3HQdu6ZkPNEjiGjBQOO0npWIR%2Fo3U1pLlh6zY7g%2FshzDHpXhWgKCg1RLQojxTokpn9wgDlMQzWnWne6PqCMfah1U%2FzCmlwObLfYzlO0MrFP%2BxM9gZ8U1TvgktD9IZGliWDsb6pSFZvSagbgdIY7Wu2Fgue%2B45lhzLF1d5%2FqrgCTNAqKzSlzNGfDtU0Uh%2BBwmHoAUjm5mcUvm5UbO9ocit9%2FVo5JKQ05%2B5WmvTPeSFe5uN%2FjppJUJZJ72pPW9rMuFN9LS24ylhkYbFW2rYWu7DGDK%2Bqg4%2Ff0S6fSBQcisbpY%2B%2Bm5L8NpEI9uVw%3D%3D","environmentVariables":{"SERVER_PORT":"8080","DB_PORT":"25060","DB_USERNAME":"doadmin","DB_PASSWORD":"AVNS_TjWZPNR1C5EBw_N","DB_HOST":"db-mysql-fra1-39504-do-user-11242352-0.b.db.ondigitalocean.com","DB_NAME":"defaultdb","JWT_CODE":"karolis123","FIREBASE_CONFIG":"{\"projectId\":\"nodeexam-c3b82\",\"storageBucket\":\"nodeexam-c3b82.appspot.com\"}","GCLOUD_PROJECT":"nodeexam-c3b82"},"runtime":"nodejs16"},"versionId":"1","updateTime":"2022-05-25T19:17:35Z","buildId":"0318f4f7-a074-43b8-a1d9-e681e57535ae","buildName":"projects/97103227611/locations/us-central1/builds/0318f4f7-a074-43b8-a1d9-e681e57535ae"}}
+[debug] [2022-05-25T19:17:40.880Z] [create-default-us-central1-app] Retrying task index 0
+[debug] [2022-05-25T19:17:40.880Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF [none]
+[debug] [2022-05-25T19:17:41.367Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF 200
+[debug] [2022-05-25T19:17:41.367Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF {"name":"operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/nodeexam-c3b82/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/nodeexam-c3b82/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-502404519006.us-central1.cloudfunctions.appspot.com/0a1b12bc-d10f-4d63-9c07-a64db1cffcb4.zip?GoogleAccessId=service-97103227611@gcf-admin-robot.iam.gserviceaccount.com&Expires=1653508054&Signature=YZxKv9IIbyAiwvO51EMvjZ3y1IWtv3HQdu6ZkPNEjiGjBQOO0npWIR%2Fo3U1pLlh6zY7g%2FshzDHpXhWgKCg1RLQojxTokpn9wgDlMQzWnWne6PqCMfah1U%2FzCmlwObLfYzlO0MrFP%2BxM9gZ8U1TvgktD9IZGliWDsb6pSFZvSagbgdIY7Wu2Fgue%2B45lhzLF1d5%2FqrgCTNAqKzSlzNGfDtU0Uh%2BBwmHoAUjm5mcUvm5UbO9ocit9%2FVo5JKQ05%2B5WmvTPeSFe5uN%2FjppJUJZJ72pPW9rMuFN9LS24ylhkYbFW2rYWu7DGDK%2Bqg4%2Ff0S6fSBQcisbpY%2B%2Bm5L8NpEI9uVw%3D%3D","environmentVariables":{"SERVER_PORT":"8080","DB_PORT":"25060","DB_USERNAME":"doadmin","DB_PASSWORD":"AVNS_TjWZPNR1C5EBw_N","DB_HOST":"db-mysql-fra1-39504-do-user-11242352-0.b.db.ondigitalocean.com","DB_NAME":"defaultdb","JWT_CODE":"karolis123","FIREBASE_CONFIG":"{\"projectId\":\"nodeexam-c3b82\",\"storageBucket\":\"nodeexam-c3b82.appspot.com\"}","GCLOUD_PROJECT":"nodeexam-c3b82"},"runtime":"nodejs16"},"versionId":"1","updateTime":"2022-05-25T19:17:35Z","buildId":"0318f4f7-a074-43b8-a1d9-e681e57535ae","buildName":"projects/97103227611/locations/us-central1/builds/0318f4f7-a074-43b8-a1d9-e681e57535ae"}}
+[debug] [2022-05-25T19:17:45.381Z] [create-default-us-central1-app] Retrying task index 0
+[debug] [2022-05-25T19:17:45.381Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF [none]
+[debug] [2022-05-25T19:17:45.876Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF 200
+[debug] [2022-05-25T19:17:45.876Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF {"name":"operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/nodeexam-c3b82/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/nodeexam-c3b82/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-502404519006.us-central1.cloudfunctions.appspot.com/0a1b12bc-d10f-4d63-9c07-a64db1cffcb4.zip?GoogleAccessId=service-97103227611@gcf-admin-robot.iam.gserviceaccount.com&Expires=1653508054&Signature=YZxKv9IIbyAiwvO51EMvjZ3y1IWtv3HQdu6ZkPNEjiGjBQOO0npWIR%2Fo3U1pLlh6zY7g%2FshzDHpXhWgKCg1RLQojxTokpn9wgDlMQzWnWne6PqCMfah1U%2FzCmlwObLfYzlO0MrFP%2BxM9gZ8U1TvgktD9IZGliWDsb6pSFZvSagbgdIY7Wu2Fgue%2B45lhzLF1d5%2FqrgCTNAqKzSlzNGfDtU0Uh%2BBwmHoAUjm5mcUvm5UbO9ocit9%2FVo5JKQ05%2B5WmvTPeSFe5uN%2FjppJUJZJ72pPW9rMuFN9LS24ylhkYbFW2rYWu7DGDK%2Bqg4%2Ff0S6fSBQcisbpY%2B%2Bm5L8NpEI9uVw%3D%3D","environmentVariables":{"SERVER_PORT":"8080","DB_PORT":"25060","DB_USERNAME":"doadmin","DB_PASSWORD":"AVNS_TjWZPNR1C5EBw_N","DB_HOST":"db-mysql-fra1-39504-do-user-11242352-0.b.db.ondigitalocean.com","DB_NAME":"defaultdb","JWT_CODE":"karolis123","FIREBASE_CONFIG":"{\"projectId\":\"nodeexam-c3b82\",\"storageBucket\":\"nodeexam-c3b82.appspot.com\"}","GCLOUD_PROJECT":"nodeexam-c3b82"},"runtime":"nodejs16"},"versionId":"1","updateTime":"2022-05-25T19:17:35Z","buildId":"0318f4f7-a074-43b8-a1d9-e681e57535ae","buildName":"projects/97103227611/locations/us-central1/builds/0318f4f7-a074-43b8-a1d9-e681e57535ae"}}
+[debug] [2022-05-25T19:17:53.878Z] [create-default-us-central1-app] Retrying task index 0
+[debug] [2022-05-25T19:17:53.878Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF [none]
+[debug] [2022-05-25T19:17:54.360Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF 200
+[debug] [2022-05-25T19:17:54.360Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF {"name":"operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/nodeexam-c3b82/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/nodeexam-c3b82/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-502404519006.us-central1.cloudfunctions.appspot.com/0a1b12bc-d10f-4d63-9c07-a64db1cffcb4.zip?GoogleAccessId=service-97103227611@gcf-admin-robot.iam.gserviceaccount.com&Expires=1653508054&Signature=YZxKv9IIbyAiwvO51EMvjZ3y1IWtv3HQdu6ZkPNEjiGjBQOO0npWIR%2Fo3U1pLlh6zY7g%2FshzDHpXhWgKCg1RLQojxTokpn9wgDlMQzWnWne6PqCMfah1U%2FzCmlwObLfYzlO0MrFP%2BxM9gZ8U1TvgktD9IZGliWDsb6pSFZvSagbgdIY7Wu2Fgue%2B45lhzLF1d5%2FqrgCTNAqKzSlzNGfDtU0Uh%2BBwmHoAUjm5mcUvm5UbO9ocit9%2FVo5JKQ05%2B5WmvTPeSFe5uN%2FjppJUJZJ72pPW9rMuFN9LS24ylhkYbFW2rYWu7DGDK%2Bqg4%2Ff0S6fSBQcisbpY%2B%2Bm5L8NpEI9uVw%3D%3D","environmentVariables":{"SERVER_PORT":"8080","DB_PORT":"25060","DB_USERNAME":"doadmin","DB_PASSWORD":"AVNS_TjWZPNR1C5EBw_N","DB_HOST":"db-mysql-fra1-39504-do-user-11242352-0.b.db.ondigitalocean.com","DB_NAME":"defaultdb","JWT_CODE":"karolis123","FIREBASE_CONFIG":"{\"projectId\":\"nodeexam-c3b82\",\"storageBucket\":\"nodeexam-c3b82.appspot.com\"}","GCLOUD_PROJECT":"nodeexam-c3b82"},"runtime":"nodejs16"},"versionId":"1","updateTime":"2022-05-25T19:17:35Z","buildId":"0318f4f7-a074-43b8-a1d9-e681e57535ae","buildName":"projects/97103227611/locations/us-central1/builds/0318f4f7-a074-43b8-a1d9-e681e57535ae"}}
+[debug] [2022-05-25T19:18:04.369Z] [create-default-us-central1-app] Retrying task index 0
+[debug] [2022-05-25T19:18:04.369Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF [none]
+[debug] [2022-05-25T19:18:04.875Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF 200
+[debug] [2022-05-25T19:18:04.876Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF {"name":"operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/nodeexam-c3b82/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/nodeexam-c3b82/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-502404519006.us-central1.cloudfunctions.appspot.com/0a1b12bc-d10f-4d63-9c07-a64db1cffcb4.zip?GoogleAccessId=service-97103227611@gcf-admin-robot.iam.gserviceaccount.com&Expires=1653508054&Signature=YZxKv9IIbyAiwvO51EMvjZ3y1IWtv3HQdu6ZkPNEjiGjBQOO0npWIR%2Fo3U1pLlh6zY7g%2FshzDHpXhWgKCg1RLQojxTokpn9wgDlMQzWnWne6PqCMfah1U%2FzCmlwObLfYzlO0MrFP%2BxM9gZ8U1TvgktD9IZGliWDsb6pSFZvSagbgdIY7Wu2Fgue%2B45lhzLF1d5%2FqrgCTNAqKzSlzNGfDtU0Uh%2BBwmHoAUjm5mcUvm5UbO9ocit9%2FVo5JKQ05%2B5WmvTPeSFe5uN%2FjppJUJZJ72pPW9rMuFN9LS24ylhkYbFW2rYWu7DGDK%2Bqg4%2Ff0S6fSBQcisbpY%2B%2Bm5L8NpEI9uVw%3D%3D","environmentVariables":{"SERVER_PORT":"8080","DB_PORT":"25060","DB_USERNAME":"doadmin","DB_PASSWORD":"AVNS_TjWZPNR1C5EBw_N","DB_HOST":"db-mysql-fra1-39504-do-user-11242352-0.b.db.ondigitalocean.com","DB_NAME":"defaultdb","JWT_CODE":"karolis123","FIREBASE_CONFIG":"{\"projectId\":\"nodeexam-c3b82\",\"storageBucket\":\"nodeexam-c3b82.appspot.com\"}","GCLOUD_PROJECT":"nodeexam-c3b82"},"runtime":"nodejs16"},"versionId":"1","updateTime":"2022-05-25T19:17:35Z","buildId":"0318f4f7-a074-43b8-a1d9-e681e57535ae","buildName":"projects/97103227611/locations/us-central1/builds/0318f4f7-a074-43b8-a1d9-e681e57535ae"}}
+[debug] [2022-05-25T19:18:14.885Z] [create-default-us-central1-app] Retrying task index 0
+[debug] [2022-05-25T19:18:14.885Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF [none]
+[debug] [2022-05-25T19:18:15.358Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF 200
+[debug] [2022-05-25T19:18:15.358Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF {"name":"operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/nodeexam-c3b82/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/nodeexam-c3b82/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-502404519006.us-central1.cloudfunctions.appspot.com/0a1b12bc-d10f-4d63-9c07-a64db1cffcb4.zip?GoogleAccessId=service-97103227611@gcf-admin-robot.iam.gserviceaccount.com&Expires=1653508054&Signature=YZxKv9IIbyAiwvO51EMvjZ3y1IWtv3HQdu6ZkPNEjiGjBQOO0npWIR%2Fo3U1pLlh6zY7g%2FshzDHpXhWgKCg1RLQojxTokpn9wgDlMQzWnWne6PqCMfah1U%2FzCmlwObLfYzlO0MrFP%2BxM9gZ8U1TvgktD9IZGliWDsb6pSFZvSagbgdIY7Wu2Fgue%2B45lhzLF1d5%2FqrgCTNAqKzSlzNGfDtU0Uh%2BBwmHoAUjm5mcUvm5UbO9ocit9%2FVo5JKQ05%2B5WmvTPeSFe5uN%2FjppJUJZJ72pPW9rMuFN9LS24ylhkYbFW2rYWu7DGDK%2Bqg4%2Ff0S6fSBQcisbpY%2B%2Bm5L8NpEI9uVw%3D%3D","environmentVariables":{"SERVER_PORT":"8080","DB_PORT":"25060","DB_USERNAME":"doadmin","DB_PASSWORD":"AVNS_TjWZPNR1C5EBw_N","DB_HOST":"db-mysql-fra1-39504-do-user-11242352-0.b.db.ondigitalocean.com","DB_NAME":"defaultdb","JWT_CODE":"karolis123","FIREBASE_CONFIG":"{\"projectId\":\"nodeexam-c3b82\",\"storageBucket\":\"nodeexam-c3b82.appspot.com\"}","GCLOUD_PROJECT":"nodeexam-c3b82"},"runtime":"nodejs16"},"versionId":"1","updateTime":"2022-05-25T19:17:35Z","buildId":"0318f4f7-a074-43b8-a1d9-e681e57535ae","buildName":"projects/97103227611/locations/us-central1/builds/0318f4f7-a074-43b8-a1d9-e681e57535ae"}}
+[debug] [2022-05-25T19:18:25.364Z] [create-default-us-central1-app] Retrying task index 0
+[debug] [2022-05-25T19:18:25.365Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF [none]
+[debug] [2022-05-25T19:18:25.821Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF 200
+[debug] [2022-05-25T19:18:25.821Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF {"name":"operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/nodeexam-c3b82/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/nodeexam-c3b82/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-502404519006.us-central1.cloudfunctions.appspot.com/0a1b12bc-d10f-4d63-9c07-a64db1cffcb4.zip?GoogleAccessId=service-97103227611@gcf-admin-robot.iam.gserviceaccount.com&Expires=1653508054&Signature=YZxKv9IIbyAiwvO51EMvjZ3y1IWtv3HQdu6ZkPNEjiGjBQOO0npWIR%2Fo3U1pLlh6zY7g%2FshzDHpXhWgKCg1RLQojxTokpn9wgDlMQzWnWne6PqCMfah1U%2FzCmlwObLfYzlO0MrFP%2BxM9gZ8U1TvgktD9IZGliWDsb6pSFZvSagbgdIY7Wu2Fgue%2B45lhzLF1d5%2FqrgCTNAqKzSlzNGfDtU0Uh%2BBwmHoAUjm5mcUvm5UbO9ocit9%2FVo5JKQ05%2B5WmvTPeSFe5uN%2FjppJUJZJ72pPW9rMuFN9LS24ylhkYbFW2rYWu7DGDK%2Bqg4%2Ff0S6fSBQcisbpY%2B%2Bm5L8NpEI9uVw%3D%3D","environmentVariables":{"SERVER_PORT":"8080","DB_PORT":"25060","DB_USERNAME":"doadmin","DB_PASSWORD":"AVNS_TjWZPNR1C5EBw_N","DB_HOST":"db-mysql-fra1-39504-do-user-11242352-0.b.db.ondigitalocean.com","DB_NAME":"defaultdb","JWT_CODE":"karolis123","FIREBASE_CONFIG":"{\"projectId\":\"nodeexam-c3b82\",\"storageBucket\":\"nodeexam-c3b82.appspot.com\"}","GCLOUD_PROJECT":"nodeexam-c3b82"},"runtime":"nodejs16"},"versionId":"1","updateTime":"2022-05-25T19:17:35Z","buildId":"0318f4f7-a074-43b8-a1d9-e681e57535ae","buildName":"projects/97103227611/locations/us-central1/builds/0318f4f7-a074-43b8-a1d9-e681e57535ae"}}
+[debug] [2022-05-25T19:18:35.834Z] [create-default-us-central1-app] Retrying task index 0
+[debug] [2022-05-25T19:18:35.834Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF [none]
+[debug] [2022-05-25T19:18:36.308Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF 200
+[debug] [2022-05-25T19:18:36.308Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF {"name":"operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/nodeexam-c3b82/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/nodeexam-c3b82/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-502404519006.us-central1.cloudfunctions.appspot.com/0a1b12bc-d10f-4d63-9c07-a64db1cffcb4.zip?GoogleAccessId=service-97103227611@gcf-admin-robot.iam.gserviceaccount.com&Expires=1653508054&Signature=YZxKv9IIbyAiwvO51EMvjZ3y1IWtv3HQdu6ZkPNEjiGjBQOO0npWIR%2Fo3U1pLlh6zY7g%2FshzDHpXhWgKCg1RLQojxTokpn9wgDlMQzWnWne6PqCMfah1U%2FzCmlwObLfYzlO0MrFP%2BxM9gZ8U1TvgktD9IZGliWDsb6pSFZvSagbgdIY7Wu2Fgue%2B45lhzLF1d5%2FqrgCTNAqKzSlzNGfDtU0Uh%2BBwmHoAUjm5mcUvm5UbO9ocit9%2FVo5JKQ05%2B5WmvTPeSFe5uN%2FjppJUJZJ72pPW9rMuFN9LS24ylhkYbFW2rYWu7DGDK%2Bqg4%2Ff0S6fSBQcisbpY%2B%2Bm5L8NpEI9uVw%3D%3D","environmentVariables":{"SERVER_PORT":"8080","DB_PORT":"25060","DB_USERNAME":"doadmin","DB_PASSWORD":"AVNS_TjWZPNR1C5EBw_N","DB_HOST":"db-mysql-fra1-39504-do-user-11242352-0.b.db.ondigitalocean.com","DB_NAME":"defaultdb","JWT_CODE":"karolis123","FIREBASE_CONFIG":"{\"projectId\":\"nodeexam-c3b82\",\"storageBucket\":\"nodeexam-c3b82.appspot.com\"}","GCLOUD_PROJECT":"nodeexam-c3b82"},"runtime":"nodejs16"},"versionId":"1","updateTime":"2022-05-25T19:17:35Z","buildId":"0318f4f7-a074-43b8-a1d9-e681e57535ae","buildName":"projects/97103227611/locations/us-central1/builds/0318f4f7-a074-43b8-a1d9-e681e57535ae"}}
+[debug] [2022-05-25T19:18:46.319Z] [create-default-us-central1-app] Retrying task index 0
+[debug] [2022-05-25T19:18:46.319Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF [none]
+[debug] [2022-05-25T19:18:46.785Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF 200
+[debug] [2022-05-25T19:18:46.785Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF {"name":"operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/nodeexam-c3b82/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/nodeexam-c3b82/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-502404519006.us-central1.cloudfunctions.appspot.com/0a1b12bc-d10f-4d63-9c07-a64db1cffcb4.zip?GoogleAccessId=service-97103227611@gcf-admin-robot.iam.gserviceaccount.com&Expires=1653508054&Signature=YZxKv9IIbyAiwvO51EMvjZ3y1IWtv3HQdu6ZkPNEjiGjBQOO0npWIR%2Fo3U1pLlh6zY7g%2FshzDHpXhWgKCg1RLQojxTokpn9wgDlMQzWnWne6PqCMfah1U%2FzCmlwObLfYzlO0MrFP%2BxM9gZ8U1TvgktD9IZGliWDsb6pSFZvSagbgdIY7Wu2Fgue%2B45lhzLF1d5%2FqrgCTNAqKzSlzNGfDtU0Uh%2BBwmHoAUjm5mcUvm5UbO9ocit9%2FVo5JKQ05%2B5WmvTPeSFe5uN%2FjppJUJZJ72pPW9rMuFN9LS24ylhkYbFW2rYWu7DGDK%2Bqg4%2Ff0S6fSBQcisbpY%2B%2Bm5L8NpEI9uVw%3D%3D","environmentVariables":{"SERVER_PORT":"8080","DB_PORT":"25060","DB_USERNAME":"doadmin","DB_PASSWORD":"AVNS_TjWZPNR1C5EBw_N","DB_HOST":"db-mysql-fra1-39504-do-user-11242352-0.b.db.ondigitalocean.com","DB_NAME":"defaultdb","JWT_CODE":"karolis123","FIREBASE_CONFIG":"{\"projectId\":\"nodeexam-c3b82\",\"storageBucket\":\"nodeexam-c3b82.appspot.com\"}","GCLOUD_PROJECT":"nodeexam-c3b82"},"runtime":"nodejs16"},"versionId":"1","updateTime":"2022-05-25T19:17:35Z","buildId":"0318f4f7-a074-43b8-a1d9-e681e57535ae","sourceToken":"a452a845-2180-4fa3-8d8c-35f2025da738","buildName":"projects/97103227611/locations/us-central1/builds/0318f4f7-a074-43b8-a1d9-e681e57535ae"}}
+[debug] [2022-05-25T19:18:46.785Z] Got source token a452a845-2180-4fa3-8d8c-35f2025da738 for region us-central1
+[debug] [2022-05-25T19:18:56.792Z] [create-default-us-central1-app] Retrying task index 0
+[debug] [2022-05-25T19:18:56.793Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF [none]
+[debug] [2022-05-25T19:18:57.296Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF 200
+[debug] [2022-05-25T19:18:57.296Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF {"name":"operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/nodeexam-c3b82/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/nodeexam-c3b82/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-502404519006.us-central1.cloudfunctions.appspot.com/0a1b12bc-d10f-4d63-9c07-a64db1cffcb4.zip?GoogleAccessId=service-97103227611@gcf-admin-robot.iam.gserviceaccount.com&Expires=1653508054&Signature=YZxKv9IIbyAiwvO51EMvjZ3y1IWtv3HQdu6ZkPNEjiGjBQOO0npWIR%2Fo3U1pLlh6zY7g%2FshzDHpXhWgKCg1RLQojxTokpn9wgDlMQzWnWne6PqCMfah1U%2FzCmlwObLfYzlO0MrFP%2BxM9gZ8U1TvgktD9IZGliWDsb6pSFZvSagbgdIY7Wu2Fgue%2B45lhzLF1d5%2FqrgCTNAqKzSlzNGfDtU0Uh%2BBwmHoAUjm5mcUvm5UbO9ocit9%2FVo5JKQ05%2B5WmvTPeSFe5uN%2FjppJUJZJ72pPW9rMuFN9LS24ylhkYbFW2rYWu7DGDK%2Bqg4%2Ff0S6fSBQcisbpY%2B%2Bm5L8NpEI9uVw%3D%3D","environmentVariables":{"SERVER_PORT":"8080","DB_PORT":"25060","DB_USERNAME":"doadmin","DB_PASSWORD":"AVNS_TjWZPNR1C5EBw_N","DB_HOST":"db-mysql-fra1-39504-do-user-11242352-0.b.db.ondigitalocean.com","DB_NAME":"defaultdb","JWT_CODE":"karolis123","FIREBASE_CONFIG":"{\"projectId\":\"nodeexam-c3b82\",\"storageBucket\":\"nodeexam-c3b82.appspot.com\"}","GCLOUD_PROJECT":"nodeexam-c3b82"},"runtime":"nodejs16"},"versionId":"1","updateTime":"2022-05-25T19:17:35Z","buildId":"0318f4f7-a074-43b8-a1d9-e681e57535ae","sourceToken":"a452a845-2180-4fa3-8d8c-35f2025da738","buildName":"projects/97103227611/locations/us-central1/builds/0318f4f7-a074-43b8-a1d9-e681e57535ae"}}
+[debug] [2022-05-25T19:18:57.296Z] Got source token a452a845-2180-4fa3-8d8c-35f2025da738 for region us-central1
+[debug] [2022-05-25T19:19:07.303Z] [create-default-us-central1-app] Retrying task index 0
+[debug] [2022-05-25T19:19:07.304Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF [none]
+[debug] [2022-05-25T19:19:07.815Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF 200
+[debug] [2022-05-25T19:19:07.815Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF {"name":"operations/bm9kZWV4YW0tYzNiODIvdXMtY2VudHJhbDEvYXBwL0hDRGRzdVlBelZF","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/nodeexam-c3b82/locations/us-central1/functions/app","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/nodeexam-c3b82/locations/us-central1/functions/app","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"app","labels":{"deployment-tool":"cli-firebase"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-502404519006.us-central1.cloudfunctions.appspot.com/0a1b12bc-d10f-4d63-9c07-a64db1cffcb4.zip?GoogleAccessId=service-97103227611@gcf-admin-robot.iam.gserviceaccount.com&Expires=1653508054&Signature=YZxKv9IIbyAiwvO51EMvjZ3y1IWtv3HQdu6ZkPNEjiGjBQOO0npWIR%2Fo3U1pLlh6zY7g%2FshzDHpXhWgKCg1RLQojxTokpn9wgDlMQzWnWne6PqCMfah1U%2FzCmlwObLfYzlO0MrFP%2BxM9gZ8U1TvgktD9IZGliWDsb6pSFZvSagbgdIY7Wu2Fgue%2B45lhzLF1d5%2FqrgCTNAqKzSlzNGfDtU0Uh%2BBwmHoAUjm5mcUvm5UbO9ocit9%2FVo5JKQ05%2B5WmvTPeSFe5uN%2FjppJUJZJ72pPW9rMuFN9LS24ylhkYbFW2rYWu7DGDK%2Bqg4%2Ff0S6fSBQcisbpY%2B%2Bm5L8NpEI9uVw%3D%3D","environmentVariables":{"SERVER_PORT":"8080","DB_PORT":"25060","DB_USERNAME":"doadmin","DB_PASSWORD":"AVNS_TjWZPNR1C5EBw_N","DB_HOST":"db-mysql-fra1-39504-do-user-11242352-0.b.db.ondigitalocean.com","DB_NAME":"defaultdb","JWT_CODE":"karolis123","FIREBASE_CONFIG":"{\"projectId\":\"nodeexam-c3b82\",\"storageBucket\":\"nodeexam-c3b82.appspot.com\"}","GCLOUD_PROJECT":"nodeexam-c3b82"},"runtime":"nodejs16"},"versionId":"1","updateTime":"2022-05-25T19:19:06Z","buildId":"0318f4f7-a074-43b8-a1d9-e681e57535ae","sourceToken":"a452a845-2180-4fa3-8d8c-35f2025da738","buildName":"projects/97103227611/locations/us-central1/builds/0318f4f7-a074-43b8-a1d9-e681e57535ae"},"done":true,"error":{"code":3,"message":"Function failed on loading user code. This is likely due to a bug in the user code. Error message: Error: please examine your function logs to see the error cause: https://cloud.google.com/functions/docs/monitoring/logging#viewing_logs. Additional troubleshooting documentation can be found at https://cloud.google.com/functions/docs/troubleshooting#logging. Please visit https://cloud.google.com/functions/docs/troubleshooting for in-depth troubleshooting documentation."}}
+[debug] [2022-05-25T19:19:07.815Z] Got source token a452a845-2180-4fa3-8d8c-35f2025da738 for region us-central1
+[error] Function failed on loading user code. This is likely due to a bug in the user code. Error message: Error: please examine your function logs to see the error cause: https://cloud.google.com/functions/docs/monitoring/logging#viewing_logs. Additional troubleshooting documentation can be found at https://cloud.google.com/functions/docs/troubleshooting#logging. Please visit https://cloud.google.com/functions/docs/troubleshooting for in-depth troubleshooting documentation.
+[debug] [2022-05-25T19:19:07.828Z] Total Function Deployment time: 92621
+[debug] [2022-05-25T19:19:07.828Z] 1 Functions Deployed
+[debug] [2022-05-25T19:19:07.828Z] 1 Functions Errored
+[debug] [2022-05-25T19:19:07.828Z] 0 Function Deployments Aborted
+[debug] [2022-05-25T19:19:07.828Z] Average Function Deployment time: 92619
+[info] 
+[info] Functions deploy had errors with the following functions:
+	app(us-central1)
+[debug] [2022-05-25T19:19:07.983Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[info] i  functions: cleaning up build files... 
+[debug] [2022-05-25T19:19:07.985Z] >>> [apiv2][query] GET https://us.gcr.io/v2/nodeexam-c3b82/gcf/us-central1/tags/list [none]
+[debug] [2022-05-25T19:19:08.907Z] <<< [apiv2][status] GET https://us.gcr.io/v2/nodeexam-c3b82/gcf/us-central1/tags/list 200
+[debug] [2022-05-25T19:19:08.907Z] <<< [apiv2][body] GET https://us.gcr.io/v2/nodeexam-c3b82/gcf/us-central1/tags/list {"child":["656b7508-967d-4bbf-9362-4a8168b1b5c8"],"manifest":{},"name":"nodeexam-c3b82/gcf/us-central1","tags":[]}
+[debug] [2022-05-25T19:19:08.908Z] >>> [apiv2][query] GET https://us.gcr.io/v2/nodeexam-c3b82/gcf/us-central1/656b7508-967d-4bbf-9362-4a8168b1b5c8/tags/list [none]
+[debug] [2022-05-25T19:19:09.840Z] <<< [apiv2][status] GET https://us.gcr.io/v2/nodeexam-c3b82/gcf/us-central1/656b7508-967d-4bbf-9362-4a8168b1b5c8/tags/list 200
+[debug] [2022-05-25T19:19:09.840Z] <<< [apiv2][body] GET https://us.gcr.io/v2/nodeexam-c3b82/gcf/us-central1/656b7508-967d-4bbf-9362-4a8168b1b5c8/tags/list {"child":["cache"],"manifest":{"sha256:b32628f844bfcf4cb975af07f7c0a4bf4e44a308e1a65f6724d616a8e44719ea":{"imageSizeBytes":"424407449","layerId":"","mediaType":"application/vnd.docker.distribution.manifest.v2+json","tag":["app_version-1","latest"],"timeCreatedMs":"315532801000","timeUploadedMs":"1653506308630"}},"name":"nodeexam-c3b82/gcf/us-central1/656b7508-967d-4bbf-9362-4a8168b1b5c8","tags":["app_version-1","latest"]}
+[debug] [2022-05-25T19:19:09.840Z] >>> [apiv2][query] GET https://us.gcr.io/v2/nodeexam-c3b82/gcf/us-central1/656b7508-967d-4bbf-9362-4a8168b1b5c8/cache/tags/list [none]
+[debug] [2022-05-25T19:19:09.841Z] >>> [apiv2][query] DELETE https://us.gcr.io/v2/nodeexam-c3b82/gcf/us-central1/656b7508-967d-4bbf-9362-4a8168b1b5c8/manifests/app_version-1 [none]
+[debug] [2022-05-25T19:19:09.842Z] >>> [apiv2][query] DELETE https://us.gcr.io/v2/nodeexam-c3b82/gcf/us-central1/656b7508-967d-4bbf-9362-4a8168b1b5c8/manifests/latest [none]
+[debug] [2022-05-25T19:19:10.727Z] <<< [apiv2][status] GET https://us.gcr.io/v2/nodeexam-c3b82/gcf/us-central1/656b7508-967d-4bbf-9362-4a8168b1b5c8/cache/tags/list 200
+[debug] [2022-05-25T19:19:10.727Z] <<< [apiv2][body] GET https://us.gcr.io/v2/nodeexam-c3b82/gcf/us-central1/656b7508-967d-4bbf-9362-4a8168b1b5c8/cache/tags/list {"child":[],"manifest":{"sha256:7899c83d3fd126a37cd6809e25b9e518f086cc1477f813d8f7938a763f8dceea":{"imageSizeBytes":"15276330","layerId":"","mediaType":"application/vnd.docker.distribution.manifest.v2+json","tag":["latest"],"timeCreatedMs":"315532801000","timeUploadedMs":"1653506309152"}},"name":"nodeexam-c3b82/gcf/us-central1/656b7508-967d-4bbf-9362-4a8168b1b5c8/cache","tags":["latest"]}
+[debug] [2022-05-25T19:19:10.727Z] >>> [apiv2][query] DELETE https://us.gcr.io/v2/nodeexam-c3b82/gcf/us-central1/656b7508-967d-4bbf-9362-4a8168b1b5c8/cache/manifests/latest [none]
+[debug] [2022-05-25T19:19:10.999Z] <<< [apiv2][status] DELETE https://us.gcr.io/v2/nodeexam-c3b82/gcf/us-central1/656b7508-967d-4bbf-9362-4a8168b1b5c8/manifests/app_version-1 202
+[debug] [2022-05-25T19:19:10.999Z] <<< [apiv2][body] DELETE https://us.gcr.io/v2/nodeexam-c3b82/gcf/us-central1/656b7508-967d-4bbf-9362-4a8168b1b5c8/manifests/app_version-1 {"errors":[]}
+[debug] [2022-05-25T19:19:10.999Z] <<< [apiv2][status] DELETE https://us.gcr.io/v2/nodeexam-c3b82/gcf/us-central1/656b7508-967d-4bbf-9362-4a8168b1b5c8/manifests/latest 202
+[debug] [2022-05-25T19:19:10.999Z] <<< [apiv2][body] DELETE https://us.gcr.io/v2/nodeexam-c3b82/gcf/us-central1/656b7508-967d-4bbf-9362-4a8168b1b5c8/manifests/latest {"errors":[]}
+[debug] [2022-05-25T19:19:10.999Z] >>> [apiv2][query] DELETE https://us.gcr.io/v2/nodeexam-c3b82/gcf/us-central1/656b7508-967d-4bbf-9362-4a8168b1b5c8/manifests/sha256:b32628f844bfcf4cb975af07f7c0a4bf4e44a308e1a65f6724d616a8e44719ea [none]
+[debug] [2022-05-25T19:19:11.850Z] <<< [apiv2][status] DELETE https://us.gcr.io/v2/nodeexam-c3b82/gcf/us-central1/656b7508-967d-4bbf-9362-4a8168b1b5c8/cache/manifests/latest 202
+[debug] [2022-05-25T19:19:11.850Z] <<< [apiv2][body] DELETE https://us.gcr.io/v2/nodeexam-c3b82/gcf/us-central1/656b7508-967d-4bbf-9362-4a8168b1b5c8/cache/manifests/latest {"errors":[]}
+[debug] [2022-05-25T19:19:11.850Z] >>> [apiv2][query] DELETE https://us.gcr.io/v2/nodeexam-c3b82/gcf/us-central1/656b7508-967d-4bbf-9362-4a8168b1b5c8/cache/manifests/sha256:7899c83d3fd126a37cd6809e25b9e518f086cc1477f813d8f7938a763f8dceea [none]
+[debug] [2022-05-25T19:19:14.130Z] <<< [apiv2][status] DELETE https://us.gcr.io/v2/nodeexam-c3b82/gcf/us-central1/656b7508-967d-4bbf-9362-4a8168b1b5c8/manifests/sha256:b32628f844bfcf4cb975af07f7c0a4bf4e44a308e1a65f6724d616a8e44719ea 202
+[debug] [2022-05-25T19:19:14.131Z] <<< [apiv2][body] DELETE https://us.gcr.io/v2/nodeexam-c3b82/gcf/us-central1/656b7508-967d-4bbf-9362-4a8168b1b5c8/manifests/sha256:b32628f844bfcf4cb975af07f7c0a4bf4e44a308e1a65f6724d616a8e44719ea {"errors":[]}
+[debug] [2022-05-25T19:19:14.732Z] <<< [apiv2][status] DELETE https://us.gcr.io/v2/nodeexam-c3b82/gcf/us-central1/656b7508-967d-4bbf-9362-4a8168b1b5c8/cache/manifests/sha256:7899c83d3fd126a37cd6809e25b9e518f086cc1477f813d8f7938a763f8dceea 202
+[debug] [2022-05-25T19:19:14.732Z] <<< [apiv2][body] DELETE https://us.gcr.io/v2/nodeexam-c3b82/gcf/us-central1/656b7508-967d-4bbf-9362-4a8168b1b5c8/cache/manifests/sha256:7899c83d3fd126a37cd6809e25b9e518f086cc1477f813d8f7938a763f8dceea {"errors":[]}
+[debug] [2022-05-25T19:19:14.838Z] Error: Failed to create function app in region us-central1
+    at C:\Users\karol\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:42:11
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Fabricator.createV1Function (C:\Users\karol\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:168:32)
+    at async Fabricator.createEndpoint (C:\Users\karol\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:119:13)
+    at async handle (C:\Users\karol\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:78:17)
+[error] 
+[error] Error: There was an error deploying functions
+[debug] [2022-05-25T19:27:21.449Z] ----------------------------------------------------------------------
+[debug] [2022-05-25T19:27:21.453Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\karol\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-05-25T19:27:21.454Z] CLI Version:   11.0.1
+[debug] [2022-05-25T19:27:21.454Z] Platform:      win32
+[debug] [2022-05-25T19:27:21.454Z] Node Version:  v16.13.0
+[debug] [2022-05-25T19:27:21.455Z] Time:          Wed May 25 2022 22:27:21 GMT+0300 (Eastern European Summer Time)
+[debug] [2022-05-25T19:27:21.456Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-25T19:27:21.542Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-25T19:27:21.543Z] > authorizing via signed-in user (karolisposka96@gmail.com)
+[debug] [2022-05-25T19:27:21.543Z] [iam] checking project nodeexam-c3b82 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2022-05-25T19:27:21.545Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/nodeexam-c3b82:testIamPermissions [none]
+[debug] [2022-05-25T19:27:21.546Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nodeexam-c3b82:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2022-05-25T19:27:22.382Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/nodeexam-c3b82:testIamPermissions 200
+[debug] [2022-05-25T19:27:22.382Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nodeexam-c3b82:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2022-05-25T19:27:22.383Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/nodeexam-c3b82/serviceAccounts/nodeexam-c3b82@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2022-05-25T19:27:22.383Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/nodeexam-c3b82/serviceAccounts/nodeexam-c3b82@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-05-25T19:27:23.162Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/nodeexam-c3b82/serviceAccounts/nodeexam-c3b82@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2022-05-25T19:27:23.163Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/nodeexam-c3b82/serviceAccounts/nodeexam-c3b82@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'nodeexam-c3b82'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] +  functions: Finished running predeploy script. 
+[debug] [2022-05-25T19:27:24.925Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nodeexam-c3b82 [none]
+[debug] [2022-05-25T19:27:25.243Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nodeexam-c3b82 200
+[debug] [2022-05-25T19:27:25.243Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nodeexam-c3b82 {"projectId":"nodeexam-c3b82","projectNumber":"97103227611","displayName":"nodeExam","name":"projects/nodeexam-c3b82","resources":{"hostingSite":"nodeexam-c3b82"},"state":"ACTIVE"}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2022-05-25T19:27:25.245Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nodeexam-c3b82/services/cloudfunctions.googleapis.com [none]
+[debug] [2022-05-25T19:27:25.246Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nodeexam-c3b82/services/runtimeconfig.googleapis.com [none]
+[debug] [2022-05-25T19:27:25.247Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nodeexam-c3b82/services/cloudbuild.googleapis.com [none]
+[debug] [2022-05-25T19:27:25.248Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nodeexam-c3b82/services/artifactregistry.googleapis.com [none]
+[debug] [2022-05-25T19:27:26.231Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nodeexam-c3b82/services/cloudbuild.googleapis.com 200
+[debug] [2022-05-25T19:27:26.231Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nodeexam-c3b82/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2022-05-25T19:27:26.277Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nodeexam-c3b82/services/runtimeconfig.googleapis.com 200
+[debug] [2022-05-25T19:27:26.278Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nodeexam-c3b82/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2022-05-25T19:27:26.280Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nodeexam-c3b82/services/artifactregistry.googleapis.com 200
+[debug] [2022-05-25T19:27:26.280Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nodeexam-c3b82/services/artifactregistry.googleapis.com [omitted]
+[debug] [2022-05-25T19:27:26.282Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nodeexam-c3b82/services/cloudfunctions.googleapis.com 200
+[debug] [2022-05-25T19:27:26.282Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nodeexam-c3b82/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2022-05-25T19:27:26.283Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nodeexam-c3b82/adminSdkConfig [none]
+[debug] [2022-05-25T19:27:26.569Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nodeexam-c3b82/adminSdkConfig 200
+[debug] [2022-05-25T19:27:26.569Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nodeexam-c3b82/adminSdkConfig {"projectId":"nodeexam-c3b82","storageBucket":"nodeexam-c3b82.appspot.com"}
+[debug] [2022-05-25T19:27:26.570Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/nodeexam-c3b82/configs [none]
+[debug] [2022-05-25T19:27:26.973Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/nodeexam-c3b82/configs 200
+[debug] [2022-05-25T19:27:26.973Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/nodeexam-c3b82/configs {}
+[info] i  functions: preparing codebase default for deployment 
+[debug] [2022-05-25T19:27:26.976Z] Validating nodejs source
+[debug] [2022-05-25T19:27:30.103Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "src/index.js",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-05-25T19:27:30.103Z] Building nodejs source
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2022-05-25T19:27:30.105Z] Analyzing nodejs backend spec
+[debug] [2022-05-25T19:27:30.107Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-05-25T19:27:30.443Z] Serving at port 9005
+
+[debug] [2022-05-25T19:27:30.534Z] 8080
+
+[debug] [2022-05-25T19:27:30.535Z] 8080
+
+[debug] [2022-05-25T19:27:31.042Z] FetchError: request to http://localhost:9005/__/quitquitquit failed, reason: connect ECONNREFUSED 127.0.0.1:9005
+    at ClientRequest.<anonymous> (C:\Users\karol\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1491:11)
+    at ClientRequest.emit (node:events:390:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at Socket.socketErrorListener (node:_http_client:447:9)
+    at Socket.emit (node:events:390:28)
+    at Socket.emit (node:domain:475:12)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: An unexpected error has occurred.
