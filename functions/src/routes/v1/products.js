@@ -2,13 +2,16 @@ const express = require('express');
 const mysql = require('mysql2/promise');
 const checkIfLoggedIn = require('../../middleware/auth/usersAuth');
 const validate = require('../../middleware/validation/validation');
-const wineSchema = require('../../middleware/validation/validationSchemas/wineSchema');
+const { wineSchema } = require('../../middleware/validation/validationSchemas/wineSchema');
 const sqlController = require('../../controllers/sqlController');
 const router = express.Router();
 
 router.get('/wines/:page/', async (req, res) => {
   try {
     const page = req.params.page;
+    if (page <= 0) {
+      return res.status(400).send({ msg: 'wrong data passed' });
+    }
     const offset = (page - 1) * 3;
     const data = await sqlController(`SELECT * FROM wines LIMIT 3 OFFSET ${offset}`);
     if (data.length === 0) {
